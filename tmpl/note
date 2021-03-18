@@ -1,0 +1,11 @@
+---
+title: {{.Title}}
+date: {{.Date}}
+tags: |
+  {{.Tags}}
+backlinks: |
+  {{.Backlings}}
+---
+From {{.Source}}:
+
+  > {{.Quote}}
