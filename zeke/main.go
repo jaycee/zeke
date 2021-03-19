@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "github.com/jaycee/zeke/cmd"
+import "github.com/jaycee/zeke/zeke/cmd"
 
 func main() {
 	cmd.Execute()
