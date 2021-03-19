@@ -31,6 +31,8 @@ func newZk(cmd *cobra.Command, args []string) {
 	defer f.Close()
 	f.WriteString(contents)
 	f.Sync()
+
+	fmt.Println(filename)
 }
 
 func handleErr(err error, msg string) {
@@ -43,7 +45,12 @@ func renderTemplate(now time.Time) string {
 		"---",
 		"title:",
 		fmt.Sprintf("date: %v", now.Format("2006-01-02 15:04")),
+		"tags:",
+		"backlings:",
 		"---",
+		"From SOURCE:",
+		"\n",
+		"  > QUOTE",
 	}
 	return strings.Join(output, "\n")
 }
